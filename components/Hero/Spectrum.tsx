@@ -10,13 +10,13 @@ import {
   IconSignature,
   IconTableColumn,
 } from "@tabler/icons-react";
-import Image from "next/image"; // Import Image component from next/image
+import Image from "next/image";
 
 export function Spectrum() {
   return (
-    <div className="flex flex-col items-center justify-center px-14 py-15">
+    <div className="flex flex-col items-center justify-center px-14 py-10">
       <h3 className="text-[#FF4D00] text-xl">Business Branding</h3>
-      <h1 className="relative mt-3 bg-clip-text font-black text-transparent bg-gradient-to-r leading-tight mb-2 text-4xl text-center from-[#ffffff] to-[rgba(255,255,255,0.42)]">
+      <h1 className="relative bg-clip-text font-black text-transparent bg-gradient-to-r leading-tight mb-12 text-4xl text-center from-[#ffffff] to-[rgba(255,255,255,0.42)]">
         Full Spectrum Branding
       </h1>
 
@@ -37,14 +37,16 @@ export function Spectrum() {
 }
 
 interface SkeletonProps {
-    imageUrl: string; // Define imageUrl prop as string type
-  }
-  
-  const Skeleton: React.FC<SkeletonProps> = ({ imageUrl }) => (
-    <div className="flex flex-1 w-full h-full rounded-xl bg-[#0B0B0B]">
-      <Image src={imageUrl} alt="" width={600} height={300} /> {/* Fix Image component usage */}
+  imageUrl: string; // Define imageUrl prop as string type
+}
+
+const Skeleton: React.FC<SkeletonProps> = ({ imageUrl }) => (
+  <div className="flex flex-1 w-full h-full rounded-xl bg-[#0B0B0B] relative">
+    <div className="absolute inset-0 flex items-center justify-center">
+      <Image src={imageUrl} alt="" layout="fill" objectFit="cover" objectPosition="top" />
     </div>
-  );
+  </div>
+);
 const items = [
   {
     title: "The Dawn of Innovation",

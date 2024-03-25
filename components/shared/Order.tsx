@@ -1,10 +1,8 @@
-"use client"
- 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
- 
-import { Button } from "@/components/ui/button"
+import React from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -13,84 +11,178 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { useState } from "react"
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 
-// import Modal from './Modal'; 
-// import './OrderForm.css'; 
+const formSchema = z.object({
+  projectTitle: z.string().min(2, {
+    message: "Project title must be at least 2 characters.",
+  }),
+  budget: z.string(),
+  email: z.string().email(),
+  description: z.string(),
+  deadline: z.string(),
+  attachments: z.string(), // Add attachments property to the schema
+});
 
-const Order = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    projectTitle: '',
-    budget: '',
-    email: '',
-    description: '',
-    image: null,
-    deadline: '',
+const OrderForm = ({ onClose }) => {
+  const form = useForm({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      projectTitle: "",
+      budget: "",
+      email: "",
+      description: "",
+      deadline: "",
+      attachments: "", // Add default value for attachments
+    },
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    setFormData({ ...formData, image: file });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-    setIsModalOpen(true);
+  const onSubmit = (values : z.infer<typeof formSchema>) => {
+    console.log(values);
+    // You can perform further actions here, like submitting the form data to a server
   };
 
   return (
-    <div className="order-form-container">
-      <Form onSubmit={handleSubmit} className="order-form">
-        <FormItem>
-          <FormLabel htmlFor="projectTitle">Project Title:</FormLabel>
-          <FormControl>
-            <input type="text" id="projectTitle" name="projectTitle" value={formData.projectTitle} onChange={handleChange} required />
-          </FormControl>
-        </FormItem>
-        <FormItem>
-          <FormLabel htmlFor="budget">Budget:</FormLabel>
-          <FormControl>
-            <input type="text" id="budget" name="budget" value={formData.budget} onChange={handleChange} required />
-          </FormControl>
-        </FormItem>
-        <FormItem>
-          <FormLabel htmlFor="email">Email:</FormLabel>
-          <FormControl>
-            <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
-          </FormControl>
-        </FormItem>
-        <FormItem>
-          <FormLabel htmlFor="description">Description:</FormLabel>
-          <FormControl>
-            <textarea id="description" name="description" value={formData.description} onChange={handleChange} required />
-          </FormControl>
-        </FormItem>
-        <FormItem>
-          <FormLabel htmlFor="image">Image:</FormLabel>
-          <FormControl>
-            <input type="file" id="image" name="image" onChange={handleImageChange} required />
-          </FormControl>
-        </FormItem>
-        <FormItem>
-          <FormLabel htmlFor="deadline">Deadline:</FormLabel>
-          <FormControl>
-            <input type="date" id="deadline" name="deadline" value={formData.deadline} onChange={handleChange} required />
-          </FormControl>
-        </FormItem>
-        <button type="submit" className="submit-button">Place Order</button>
+    <div className="fixed z-50 top-[53%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <Form {...form}>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="space-y-4 w-full mx-auto rounded-md p-4 md:p-8 shadow-input bg-zinc-900 dark:bg-black"
+        >
+          <FormField
+            control={form.control}
+            name="projectTitle"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="font-bold text-xl text-slate-50 dark:text-neutral-200">
+                  Project Title
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="Enter project title"
+                    {...field}
+                    className="input-field bg-zinc-800 placeholder:text-slate-50/[.5] text-slate-50 border-none"
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="font-bold text-xl text-slate-50 dark:text-neutral-200">
+                  Email
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    type="email"
+                    placeholder="Enter email"
+                    {...field}
+                    className="bg-zinc-800 border-none placeholder:text-slate-50/[.5] dark:bg-black text-slate-50 dark:text-neutral-200 placeholder-slate-200 dark:placeholder-neutral-300 focus:ring-slate-300 dark:focus:ring-neutral-300"
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="description"
+            render={({ field }) => (
+              <FormItem className="flex flex-col">
+                <FormLabel className="font-bold text-xl text-slate-50 dark:text-neutral-200">
+                  Project Description
+                </FormLabel>
+                <FormControl>
+                  <textarea
+                    {...field}
+                    placeholder="Enter Project description"
+                    className="bg-zinc-800 text-slate-50 rounded-md p-3 placeholder:text-slate-50/[.5] dark:placeholder-neutral-300 focus:ring-slate-300 dark:focus:ring-neutral-300 h-40 resize-none"
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <div className="flex items-center justify-between">
+          <FormField
+            control={form.control}
+            name="budget"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="font-bold text-xl text-slate-50 dark:text-neutral-200">
+                  Budget
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="Enter budget"
+                    {...field}
+                    className="bg-zinc-800 border-none dark:bg-black text-slate-50 placeholder:text-slate-50/[.5]"
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="deadline"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="font-bold text-xl text-slate-50 dark:text-neutral-200">
+                  Deadline
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    type="date"
+                    placeholder="Enter deadline"
+                    {...field}
+                    className="bg-zinc-800 border-none dark:bg-black text-slate-50 dark:text-neutral-200 placeholder:text-slate-50/[.5]"
+                    />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+            />
+            </div>
+          {/* Input field for file attachments */}
+          <FormField
+            control={form.control}
+            name="attachments"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="font-bold text-xl text-slate-50 dark:text-neutral-200">
+                  Attachments
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    type="file"
+                    {...field}
+                    className="bg-zinc-800 border-none dark:bg-black text-slate-50 placeholder:text-slate-50/[.5]"
+                    multiple
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <div className="flex items-center justify-center gap-3">
+            <Button onClick={onClose} className="secondary">
+              Cancel
+            </Button>
+            <Button type="submit" className="primary">
+              Place Order
+            </Button>
+          </div>
+        </form>
       </Form>
-      {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
     </div>
   );
 };
 
-export default Order;
+export default OrderForm;

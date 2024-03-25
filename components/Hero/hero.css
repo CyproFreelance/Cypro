@@ -105,3 +105,127 @@
 
 
 
+footer{
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 3% 9%;
+  background-color: rgba(0, 0, 7, 0.22);
+  background-image: url("/bg.svg");
+  background-position: top right;
+  background-size: cover;
+  backdrop-filter: blur(12312489px);
+  -webkit-backdrop-filter: blur(123124895px);
+  transition: all .3s ease;
+}
+
+.footop{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-bottom: 3%;
+}
+.footbootom{
+  margin-top: 3%;
+  padding: 0 9%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.foot-header{
+  font-size: 2rem;
+  font-weight: 300;
+  color: rgb(55, 115, 255);
+}
+.footimg>img{
+  width: 150px;
+}
+.footop a{
+  text-decoration: none;
+  color: #ffffffb7;
+  font-weight: 300;
+  font-size: 1rem;
+  transition: all .3s ease;
+}
+
+.footcolum1{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.footbootom h4{
+  font-size: 1rem;
+  color: #ffffffb7;
+  font-weight: 300;
+}
+
+.footcolum1>p{
+  line-height: 1;
+  font-size: 1.2rem;
+  color: #ffffffb7;
+  font-weight: 300;
+  transition: all .3s ease;
+}
+
+.footop a:hover{
+  color: rgba(204, 162, 253, 0.774);
+}
+
+.box-socials-foot{
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+}
+
+.box-socials-foot>a>i{
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all .3 ease;
+}
+
+.box-socials-foot>a>i:hover{
+  color: rgba(204, 162, 253, 0.774);
+}
+
+.footbootom>h4>a{
+  color: #ff2e58;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media screen and (max-width:900px){
+  footer{
+      padding: 1% 1%;
+      background-color: rgba(0, 0, 7, 0.385);
+      background-image: url("/bg.svg");
+      background-position: -500% -50%;
+      background-size: cover;
+  }
+  .footop{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .footcolum1{
+      align-items: center;
+  }
+  .footimg>img{
+      width: 50%;
+  }
+  .footimg{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .footbootom{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1%;
+      opacity: 0.7;
+  }
+}
