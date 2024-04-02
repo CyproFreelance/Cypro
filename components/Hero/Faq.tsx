@@ -31,16 +31,16 @@ const Faq = () => {
     ];
 
 	return (
-		<div className="flex flex-col justify-center px-20 py-14">
+		<div className="flex flex-col justify-center px-20 py-14 max-md:py-2 max-md:px-3">
 			<h3 className="text-[#FF4D00] text-center text-xl">Our Expertise, Your Success</h3>
-			<h1 className="relative bg-clip-text font-black text-transparent bg-gradient-to-r leading-tight mb-2 text-4xl text-center from-[#ffffff] to-[rgba(255,255,255,0.42)]">
+			<h1 className="relative bg-clip-text font-black text-transparent bg-gradient-to-r leading-tight mb-2 text-4xl text-center from-[#ffffff] to-[rgba(255,255,255,0.42)] max-md:mt-2">
 				FREQUENTLY ASKED QUESTIONS
 			</h1>
-			<Accordion type="single" collapsible className="text-white px-16 py-14 flex flex-col justify-center">
+			<Accordion type="single" collapsible className="text-white px-16 py-14 flex flex-col justify-center max-md:px-4">
                 {faqItems.map((item, index) => (
                     <AccordionItem key={index} value={`item-${index}`}>
-                        <AccordionTrigger className="text-2xl text-slate-50/[.8]">{item.question}</AccordionTrigger>
-                        <AccordionContent className="text-xl text-slate-50/[.5]">
+                        <AccordionTrigger className="text-2xl text-slate-50/[.8] max-md:text-start">{item.question}</AccordionTrigger>
+                        <AccordionContent className="text-xl text-slate-50/[.5] ">
                             {item.answer}
                         </AccordionContent>
                     </AccordionItem>

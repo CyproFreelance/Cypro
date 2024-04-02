@@ -11,8 +11,6 @@ export const FloatingNav = () => {
   useEffect(() => {
     const handleScroll = () => { 
         setVisible(scrollY.get() <= 0 || scrollY.get() > 1.5 * window.innerHeight);
-        // setVisible(scrollY.get() <= 0); // Set to visible when top
-        // setVisible(scrollY.get() > window.innerHeight); // Set to visible when below hero section
     };
 
     const unsubscribeScroll = scrollY.onChange(handleScroll);
@@ -39,7 +37,7 @@ export const FloatingNav = () => {
             y: -100,
           }}
           transition={{
-            duration: 0.1,
+            duration: 0.25, //👍8=====D🤡
           }}
           style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1000 }}
         >

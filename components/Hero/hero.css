@@ -45,12 +45,13 @@
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 24px;
+    
     text-align: center;
     color: #928286;
     z-index: 2;
     margin-top: 1rem;
 }
+
 
 
 .hero{
@@ -113,10 +114,8 @@ footer{
   padding: 3% 9%;
   background-color: rgba(0, 0, 7, 0.22);
   background-image: url("/bg.svg");
-  background-position: top right;
+  background-position: bottom;
   background-size: cover;
-  backdrop-filter: blur(12312489px);
-  -webkit-backdrop-filter: blur(123124895px);
   transition: all .3s ease;
 }
 
@@ -136,10 +135,12 @@ footer{
 .foot-header{
   font-size: 2rem;
   font-weight: 300;
-  color: rgb(55, 115, 255);
+  /* color: rgb(55, 115, 255); */
 }
 .footimg>img{
-  width: 150px;
+  width: 64px;
+  margin: 10px;
+  border-radius: 50%;
 }
 .footop a{
   text-decoration: none;
@@ -167,11 +168,11 @@ footer{
   font-size: 1.2rem;
   color: #ffffffb7;
   font-weight: 300;
-  transition: all .3s ease;
+  transition: all .2s ease;
 }
 
 .footop a:hover{
-  color: rgba(204, 162, 253, 0.774);
+  color: rgba(253, 162, 182, 0.774);
 }
 
 .box-socials-foot{
@@ -187,7 +188,7 @@ footer{
 }
 
 .box-socials-foot>a>i:hover{
-  color: rgba(204, 162, 253, 0.774);
+  color: rgba(253, 162, 173, 0.774);
 }
 
 .footbootom>h4>a{
@@ -201,9 +202,9 @@ footer{
       padding: 1% 1%;
       background-color: rgba(0, 0, 7, 0.385);
       background-image: url("/bg.svg");
-      background-position: -500% -50%;
+      background-position: -80%;
       background-size: cover;
-  }
+    }
   .footop{
       display: flex;
       flex-direction: column;
@@ -216,6 +217,7 @@ footer{
       width: 50%;
   }
   .footimg{
+    margin: 12px;
       display: flex;
       flex-direction: column;
       align-items: center;

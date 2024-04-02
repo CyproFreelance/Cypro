@@ -1,11 +1,12 @@
+import ContactPage from '@/components/Contact/ContactPage'
 import { FloatingNav } from '@/components/ui/floating-navbar'
 import React from 'react'
 
 const Contact = () => {
   return (
-    <div className='h-[200vh] text-white'>
+    <div className=''>
       <FloatingNav/>
-      Contact
+      <ContactPage />
     </div>
   )
 }
