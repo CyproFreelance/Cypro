@@ -13,7 +13,7 @@ export function NavbarDemo() {
 			<div className="flex items-center justify-center text-white font-extrabold leading-snug text-xl max-md:mt-6	" >
 				<Link href="/#">
 					<Image
-						src="/logo.webp"
+						src="/cypro4.webp"
 						alt=""
 						height={65}
 						width={65}
@@ -37,36 +37,31 @@ export function NavbarDemo() {
 				<span className="spani text-white font-semibold text-xl">ORDER</span>
 			</Link>
 
-			<>
-  <input 
-    className="menu-icon  "
-    type="checkbox"
-    id="menu-icon"
-    name="menu-icon"
-  />
-  <label htmlFor="menu-icon" />
-  <nav className="nav">
-    <ul className="pt-5">
-	
-      <li>
-		
-        <Link href="/about">About</Link>
-      </li>
-	 
-
-      <li>
-        <Link href="/about">Studio</Link>
-      </li>
-      <li>
-        <Link href="/about">Work</Link>
-      </li>
-      <li>
-        <Link href="/contact">Contact</Link>
-      </li>
-    </ul>
-  </nav>
-</>
-
+	<>
+		<input 
+			className="menu-icon  "
+			type="checkbox"
+			id="menu-icon"
+			name="menu-icon"
+		/>
+		<label htmlFor="menu-icon" />
+			<nav className="nav">
+				<ul className="pt-5">
+				<li>
+					<Link href="/about">About</Link>
+				</li>
+				<li>
+					<Link href="/about">Studio</Link>
+				</li>
+				<li>
+					<Link href="/about">Work</Link>
+				</li>
+				<li>
+					<Link href="/contact">Contact</Link>
+				</li>
+				</ul>
+			</nav>
+  </>
 		</div>
 	);
 }

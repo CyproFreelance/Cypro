@@ -51,27 +51,26 @@ const items = [
   {
     title: "The Dawn of Innovation",
     description: "Explore the birth of groundbreaking ideas and inventions.",
-    header: <Skeleton imageUrl='/image 13.svg' />,
+    header: <Skeleton imageUrl='/image13.svg' />,
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "The Digital Revolution",
     description: "Dive into the transformative power of technology.",
-    header: <Skeleton imageUrl='image 12.svg'/>,
+    header: <Skeleton imageUrl='/image12.svg'/>,
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "The Art of Design",
     description: "Discover the beauty of thoughtful and functional design.",
-    header: <Skeleton imageUrl='image 11.svg'/>,
+    header: <Skeleton imageUrl='/image11.svg'/>,
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "The Power of Communication",
     description:
       "Understand the impact of effective communication in our lives.",
-    header: <Skeleton imageUrl='image 14.svg'/>,
+    header: <Skeleton imageUrl='/image14.svg'/>,
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
-  // Repeat the above object structure for each item
 ];
