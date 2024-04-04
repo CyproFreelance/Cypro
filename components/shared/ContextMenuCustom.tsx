@@ -22,6 +22,7 @@ import { Testmonials } from "../Hero/Testimonials";
 import { FloatingNav } from "../ui/floating-navbar";
 import Footer from "./Footer";
 import { SignedOut } from "@clerk/nextjs";
+import HeroContact from "../Hero/HeroContact";
 // import { SheetMenu } from "../shared/SheetMenu"
 
 export function ContextMenuCustom() {
@@ -39,6 +40,7 @@ export function ContextMenuCustom() {
 						<Spectrum />
 						<Testmonials />
 						<Faq />
+						<HeroContact/>
 						<Footer />
 					</SignedOut>
 				</>

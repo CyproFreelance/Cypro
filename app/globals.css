@@ -107,11 +107,12 @@
   }
   body {
     @apply bg-[#111111] text-foreground;
-    scroll-behavior: smooth;
   }
 
+}
 
-
+body{
+  scroll-behavior: smooth;
 }
 
 

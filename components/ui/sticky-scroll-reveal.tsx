@@ -13,25 +13,25 @@ const StickyRoll = () => {
       text: "STRATEGY",
       description:
         "Craft a comprehensive plan to achieve your business goals efficiently and effectively. Develop strategies tailored to your unique needs and challenges.",
-      image: "algochurn.webp",
+      image: "spectrum1.webp",
     },
     {
       text: "DESIGN",
       description:
         "Create visually stunning designs that captivate your audience and enhance user experience. From UI/UX design to branding, we bring your ideas to life.",
-      image: "idk.png",
+      image: "spectrum2.webp",
     },
     {
       text: "DEVELOPMENT",
       description:
         "Transform your concepts into robust, scalable applications using cutting-edge technologies. Our development team ensures high-quality solutions that meet your requirements.",
-      image: "tailwindmasterkit.webp",
+      image: "spectrum3.webp",
     },
     {
       text: "OPTIMIZATION",
       description:
         "Fine-tune your systems and processes to maximize efficiency and performance. Identify areas for improvement and implement optimization strategies for sustainable growth.",
-      image: "screenshot.png",
+      image: "spectrum1.webp",
     },
   ];
   //okay
