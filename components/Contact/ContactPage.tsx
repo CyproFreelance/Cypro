@@ -12,7 +12,7 @@ const ContactPage = () => {
         <span>👋</span>
       </div>
 
-      <h3 className="text-[#FF4D00] text-xl">I'm interested in</h3>
+      <h3 className="text-[#FF4D00] text-xl">I&apos;m interested in</h3>
     </div>
   );
 };
