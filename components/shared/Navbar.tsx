@@ -54,7 +54,7 @@ export function NavbarDemo() {
 					<Link href="/about">Studio</Link>
 				</li>
 				<li>
-					<Link href="/about">Work</Link>
+					<Link href="/works">Work</Link>
 				</li>
 				<li>
 					<Link href="/contact">Contact</Link>
@@ -87,17 +87,17 @@ function Navbar({ className }: { className?: string }) {
 						<HoveredLink href="/about">Branding</HoveredLink>
 					</div>
 				</MenuItem>
-				<MenuItem setActive={setActive} active={active} item="Products">
+				<MenuItem setActive={setActive} active={active} item="Works">
 					<div className="text-sm grid grid-cols-2 gap-10 p-4">
 						<ProductItem
 							title="Algochurn"
-							href="/"
+							href="/works"
 							src="/algochurn.webp"
 							description="Prepare for tech interviews like never before."
 						/>
 						<ProductItem
 							title="Tailwind Master Kit"
-							href="/"
+							href="/works"
 							src="/tailwindmasterkit.webp"
 							description="Production ready Tailwind css components for your next project"
 						/>

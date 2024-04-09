@@ -4,7 +4,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div className=''>
+    <div className='m-6'>
       <FloatingNav/>
       <ContactPage />
     </div>

@@ -90,6 +90,9 @@ const StickyRoll = () => {
                 height={600}
                 className="w-[20em] h-[20rem]"
               />
+  
+                
+
             </motion.div>
             <motion.p
               className="text-slate-50/[0.5] mt-8 text-start w-3/4 max-md:w-100% max-md:px-1"
