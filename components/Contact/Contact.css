@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+.contact {
+  width: 92%;
+  margin: 169px auto;
+}
+
+.containerContact {
+  /* max-width: 800px; */
+  /* width: 800px; */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.containerContact .text {
+  text-align: center;
+  font-size: 41px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  background: -webkit-linear-gradient(
+    right,
+    #56d8e4,
+    #9f01ea,
+    #56d8e4,
+    #9f01ea
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-row {
+  overflow: visible;
+}
+
+form {
+  overflow: visible;
+}
+
+.containerContact form {
+  padding: 30px 0 0 0;
+}
+.containerContact form .form-row {
+  display: flex;
+  margin: 32px 0;
+}
+form .form-row .input-data {
+  width: 100%;
+  height: 40px;
+  position: relative;
+}
+
+form .form-row .textarea {
+  height: 70px;
+}
+
+.form-row {
+  gap: 20px;
+}
+
+.input-data input,
+.textarea textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid #ff1d60;
+}
+.input-data input:focus ~ label,
+.textarea textarea:focus ~ label,
+.input-data input:valid ~ label,
+.textarea textarea:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #ff1d60;
+}
+.textarea textarea {
+  resize: none;
+  padding-top: 10px;
+}
+.input-data label {
+  position: absolute;
+  pointer-events: none;
+  bottom: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  color: gainsboro;
+}
+.textarea label {
+  width: 100%;
+  bottom: 40px;
+  outline: none;
+}
+
+.input-data .underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: grey;
+}
+.input-data .underline:before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #ff1d60;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before,
+.textarea textarea:focus ~ .underline:before,
+.textarea textarea:valid ~ .underline:before {
+  transform: scale(1);
+}
+
+.submit-btn .input-data {
+  height: 45px !important;
+  width: 25% !important;
+}
+
+.submit-btn .input-data:hover .inner {
+  left: 0;
+}
+
+.input-data input,
+textarea {
+  background: transparent;
+  color: white;
+  outline: none;
+}
+
+.textarea textarea {
+  resize: none;
+  padding-top: 10px;
+  outline: none;
+}
+
+.submit-btn .input-data input {
+  background-image: linear-gradient(#ff6053, #ff1d60, #c71869);
+  position: relative;
+  height: 50px;
+  align-items: center;
+  font-size: 17px;
+  width: 130px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  outline: none;
+  overflow: hidden;
+  color: gainsboro;
+  transition: all 0.4s ease-in-out;
+  text-align: center;
+}
+
+.submit-btn .input-data input span {
+  margin: 10px;
+}
+
+.submit-btn .input-data input::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: "";
+  border-radius: 50%;
+  display: block;
+  width: 20em;
+  height: 20em;
+  left: -5em;
+  text-align: center;
+  transition: all 1s ease-out;
+  z-index: -1;
+  border-color: gainsboro;
+}
+
+.submit-btn .input-data input:hover {
+  color: #fff;
+  border: 1px solid #ff1d60;
+  transition: border;
+}
+
+.submit-btn .input-data input:hover::before {
+  box-shadow: inset 0 0 0 10em #ff1d60;
+}
+
+@media only screen and (max-width: 555px) {
+  .heading__main {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 476px) {
+  .form-row {
+    flex-wrap: wrap;
+  }
+  .box__heading__main {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .subheading__main {
+    margin-top: 20px;
+  }
+}
