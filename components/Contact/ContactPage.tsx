@@ -13,7 +13,7 @@ const ContactPage = () => {
       </div>
 
       <h3 className="text-[#FF4D00] text-xl subheading__main">
-        I'm interested in
+        I am interested in
       </h3>
 
       <div className="containerContact">
