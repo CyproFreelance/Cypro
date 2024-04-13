@@ -69,8 +69,15 @@ form .form-row .textarea {
 .textarea textarea:valid ~ label {
   transform: translateY(-20px);
   font-size: 14px;
-  color: #ff1d60;
+  color: hwb(342 11% 0%);
 }
+
+.input-data input[type="email"]:focus ~ label {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: hwb(342 11% 0%);
+}
+
 .textarea textarea {
   resize: none;
   padding-top: 10px;
@@ -110,6 +117,10 @@ form .form-row .textarea {
 .input-data input:valid ~ .underline:before,
 .textarea textarea:focus ~ .underline:before,
 .textarea textarea:valid ~ .underline:before {
+  transform: scale(1);
+}
+
+.input-data input[type="email"]:focus ~ .underline:before {
   transform: scale(1);
 }
 

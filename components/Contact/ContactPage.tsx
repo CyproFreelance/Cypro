@@ -75,7 +75,7 @@ const ContactPage = () => {
             </div>
             <div className="form-row">
               <div className="input-data">
-                <input type="email" required />
+                <input type="text" required />
                 <div className="underline" />
                 <label htmlFor="">Email Address</label>
               </div>
