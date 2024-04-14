@@ -41,11 +41,14 @@ interface SkeletonProps {
 }
 
 const Skeleton: React.FC<SkeletonProps> = ({ imageUrl }) => (
-  <div className="flex flex-1 w-full h-full rounded-xl bg-[#0B0B0B] relative">
-    <div className="absolute inset-0 flex items-center justify-center">
-      <Image src={imageUrl} alt="" layout="fill" objectFit="cover" objectPosition="top" />
+<div className="flex flex-1 w-full h-full rounded-xl bg-[#0B0B0B] relative">
+  <div className="absolute inset-0 flex items-center justify-center">
+    <div className="absolute inset-0 overflow-hidden rounded-xl">
+      <img className="w-full h-full object-cover object-top" src={imageUrl} alt="" />
     </div>
   </div>
+</div>
+
 );
 const items = [
   {

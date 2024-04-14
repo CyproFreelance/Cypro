@@ -22,7 +22,7 @@ const Footer = () => {
                         <a href="/" className="hover:text-[#CCA2FD]">Home</a>
                     </h3>
                     <h3>
-                        <a href="/testimonial" className="hover:text-[#CCA2FD]">Testimonial</a>
+                        <a href="/" className="hover:text-[#CCA2FD]">Testimonial</a>
                     </h3>
                     <h3>
                         <a href="/contact" className="hover:text-[#CCA2FD]">Contact</a>
@@ -31,13 +31,13 @@ const Footer = () => {
                 <div className="footcolum1 flex flex-col items-start justify-center">
                     <h1 className="foot-header text-[#de1268]">Plans</h1>
                     <h3>
-                        <a href="/crypto-vip" className="hover:text-[#CCA2FD]">Crypto VIP</a>
+                        <a href="/works" className="hover:text-[#CCA2FD]">Works</a>
                     </h3>
                     <h3>
-                        <a href="/forex" className="hover:text-[#CCA2FD]">Forex</a>
+                        <a href="/blogs" className="hover:text-[#CCA2FD]">Blogs</a>
                     </h3>
                     <h3>
-                        <a href="/stocks" className="hover:text-[#CCA2FD]">Stocks</a>
+                        <a href="/contact" className="hover:text-[#CCA2FD]">Order</a>
                     </h3>
                 </div>
                 <div className="footcolum1 flex flex-col items-start justify-center">

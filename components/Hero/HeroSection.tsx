@@ -26,7 +26,7 @@ const HeroSection = () => {
             className="container flex items-center overflow-hidden justify-center"
           >
             <motion.h1
-              className="mt-3 bg-clip-text font-[700] text-transparent bg-gradient-to-r leading-tight mb-2 text-7xl text-center from-[#ffffff] to-[rgba(255,255,255,0.42)] sm:w-[80%] max-md:text-[40px]"
+              className="mt-3 bg-clip-text font-[700] text-transparent bg-gradient-to-r leading-tight mb-2 text-[5rem] text-center from-[#ffffff] to-[rgba(255,255,255,0.42)] sm:w-[80%] max-md:text-[40px]"
               initial={{ y: 20, opacity: 0 }} 
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.2, ease: "easeOut" }}

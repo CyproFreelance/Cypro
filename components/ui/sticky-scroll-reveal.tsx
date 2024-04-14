@@ -88,7 +88,7 @@ const StickyRoll = () => {
                 alt={selected}
                 width={600}
                 height={600}
-                className="w-[20em] h-[20rem]"
+                className="w-[20em] h-[20rem] object-cover"
               />
   
                 
