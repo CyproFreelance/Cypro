@@ -201,7 +201,10 @@ footer{
 
 
 
-@media screen and (max-width:900px){
+@media screen and (max-width:750px){
+  .dots{
+    display: none;
+  }
   footer{
       padding: 1% 1%;
       background-color: rgba(0, 0, 7, 0.385);
