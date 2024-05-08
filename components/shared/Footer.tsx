@@ -63,7 +63,7 @@ const Footer = () => {
             <div className="footbootom flex justify-between items-center">
                 <h4 className="text-sm max-md:hidden">
                     Designed and Developed by{" "}
-                    <a href="https://discord.gg/cyprostudio" className="text-[#FF2E58] font-semibold">Team Cypro</a>
+                    <a href="https://proxyxdz.netlify.app/" className="text-[#FF2E58] font-semibold">Proxy</a>
                 </h4>
                 <h4 className="text-sm">
                     All Rights Reserved{" "}
